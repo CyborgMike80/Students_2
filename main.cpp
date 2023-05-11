@@ -10,11 +10,8 @@ int main() {
     db.Init();
     PrintStudents(db.ToVector());
 
-    db.Delete(3);
-    PrintStudents(db.ToVector());
-
     Student student;
-    student.Init("AA", "A");
+    student.Init("Petrov", "Petr");
     db.Add(student);
     PrintStudents(db.ToVector());
 

@@ -29,7 +29,11 @@ struct StudentsDb {
     }
 
     void Update(Student student) {
-        //TODO
+        auto it = students.find(student.id);
+        if(it != students.end()) {
+            it->second = student;
+            Export();
+        }
     }
 
     void Delete(int idStudent) {
